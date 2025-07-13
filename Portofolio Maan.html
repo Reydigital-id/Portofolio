@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maan Reehan - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  color: #fff;
+}
+
+header {
+  background: #111;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #00f2fe;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.hero button {
+  margin-top: 30px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #00f2fe;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00f2fe;
+  margin: 20px auto;
+  display: block;
+}
+
+.skills-bar {
+  margin: 10px 0;
+}
+
+.skills-bar p {
+  margin-bottom: 6px;
+}
+
+.bar {
+  height: 10px;
+  background: #444;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 10px;
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+}
+
+.socials {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: #00f2fe;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #aaa;
+  background: #111;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+  </style>
+</head><body>
+  <header>
+    <h2>Maan Reehan</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>  <section class="hero" id="home">
+    <img src="maan.jpg" alt="Maan Reehan" class="profile-img">
+    <h1>Game & Web Developer</h1>
+    <p>Programmer Muda | 2+ Tahun Pengalaman</p>
+    <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+      Explore About My Profile
+    </button>
+  </section>  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p style="text-align: center">
+      Saya adalah seorang programmer berusia 17 tahun dengan pengalaman lebih dari 2 tahun dalam dunia pemrograman.
+      Saya memiliki ketertarikan besar dalam pengembangan web dan sistem interaktif digital.
+    </p>
+  </section>  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-bar">
+      <p>HTML, CSS, JavaScript</p>
+      <div class="bar"><div class="bar-fill" style="width: 90%"></div></div>
+    </div>
+    <div class="skills-bar">
+      <p>Python & PHP</p>
+      <div class="bar"><div class="bar-fill" style="width: 70%"></div></div>
+    </div>
+    <div class="skills-bar">
+      <p>Design (Canva)</p>
+      <div class="bar"><div class="bar-fill" style="width: 80%"></div></div>
+    </div>
+  </section>  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p style="text-align:center">Hubungi saya melalui sosial media berikut:</p>
+    <div class="socials">
+      <a href="https://instagram.com/reypenyayang" target="_blank">Instagram</a>
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </section>  <footer>
+    &copy; 2025 Maan Reehan. All rights reserved.
+  </footer><button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+  <script>
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.onscroll = function () {
+      scrollTopBtn.style.display = (document.documentElement.scrollTop > 300) ? 'block' : 'none';
+    }
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script></body></html>
